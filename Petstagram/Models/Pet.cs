@@ -10,6 +10,6 @@ namespace Petstagram.Models
         public string Name { get; set; }
         public string OwnerId { get; set; }
 
-        public ICollection<PetPicture> PetPictures { get; set; }
+        public ICollection<Picture> Pictures { get; set; }
     }
 }

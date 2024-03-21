@@ -1,0 +1,8 @@
+﻿#main-sec {
+    height: 60vh;
+
+    & > .atag 
+        {
+                  font-size: 2em;
+        }
+}

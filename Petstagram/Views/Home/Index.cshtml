@@ -1,8 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@section Styles {
+    <link rel="stylesheet" href="~/css/main.css" />
+}
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4 custom-title">Petstagram</h1>
+</div>
+<div id="main-sec" class="menu d-flex flex-column justify-content-around">
+    @{
+        foreach(string option in ViewBag.options)
+        {
+            <button type="button" asp-action="" class="atag btn btn-primary rounded-pill text-center">@option</button>
+        }
+    }
 </div>

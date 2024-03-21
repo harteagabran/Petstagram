@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Petstagram.csproj": {}
+    "C:\\Users\\kumar\\source\\repos\\Petstagram\\Petstagram\\Petstagram.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Petstagram.csproj": {
+    "C:\\Users\\kumar\\source\\repos\\Petstagram\\Petstagram\\Petstagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Petstagram.csproj",
+        "projectUniqueName": "C:\\Users\\kumar\\source\\repos\\Petstagram\\Petstagram\\Petstagram.csproj",
         "projectName": "Petstagram",
-        "projectPath": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Petstagram.csproj",
+        "projectPath": "C:\\Users\\kumar\\source\\repos\\Petstagram\\Petstagram\\Petstagram.csproj",
         "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\obj\\",
+        "outputPath": "C:\\Users\\kumar\\source\\repos\\Petstagram\\Petstagram\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,10 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.3, )"
             },

@@ -4351,6 +4351,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.3",
+      "Microsoft.EntityFrameworkCore >= 8.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.3",
       "Pomelo.EntityFrameworkCore.MySql >= 8.0.2"
@@ -4362,11 +4363,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Petstagram.csproj",
+      "projectUniqueName": "C:\\Users\\kumar\\Source\\Repos\\Petstagram\\Petstagram\\Petstagram.csproj",
       "projectName": "Petstagram",
-      "projectPath": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Petstagram.csproj",
+      "projectPath": "C:\\Users\\kumar\\Source\\Repos\\Petstagram\\Petstagram\\Petstagram.csproj",
       "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\obj\\",
+      "outputPath": "C:\\Users\\kumar\\Source\\Repos\\Petstagram\\Petstagram\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4396,6 +4397,10 @@
         "targetAlias": "net8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[8.0.3, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.3, )"
           },

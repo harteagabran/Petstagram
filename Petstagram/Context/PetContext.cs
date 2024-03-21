@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Petstagram.Models;
 
@@ -10,27 +11,19 @@ namespace Petstagram.Context
 
         public DbSet<Pet> Pets { get; set; }
         public DbSet<Picture> Pictures { get; set; }
-        public DbSet<PetPicture> PetPictures { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<PetPicture>()
-                .HasKey(pp => new {pp.PetId, pp.PictureId});
-
-            modelBuilder.Entity<PetPicture>()
-                .HasOne(pp => pp.Pet)
-                .WithMany(p => p.PetPictures)
-                .HasForeignKey(pp => pp.PetId);
-
-            modelBuilder.Entity<PetPicture>()
-                .HasOne(pp => pp.Picture)
-                .WithMany(p => p.PetPictures)
-                .HasForeignKey(pp => pp.PictureId);
+            modelBuilder.Entity<Pet>()
+                .HasMany(x => x.Pictures)
+                .WithMany(y => y.Pets)
+                .UsingEntity(j => j.ToTable("PetPicture"));
+            
         }
 
-        public async Task CreateAdminuserAsync(IServiceProvider services)
+    public static async Task CreateAdminuser(IServiceProvider services)
         {
             using(var scoped = services.CreateScope())
             {
