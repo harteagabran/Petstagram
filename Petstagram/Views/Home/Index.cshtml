@@ -1,18 +1,27 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-@section Styles {
-    <link rel="stylesheet" href="~/css/main.css" />
-}
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> signInManager
 
-<div class="text-center">
-    <h1 class="display-4 custom-title">Petstagram</h1>
-</div>
-<div id="main-sec" class="menu d-flex flex-column justify-content-around">
-    @{
-        foreach(string option in ViewBag.options)
-        {
-            <button type="button" asp-action="" class="atag btn btn-primary rounded-pill text-center">@option</button>
-        }
-    }
-</div>
+@if(signInManager.IsSignedIn(User))
+{
+    <div class="text-center">
+        <h1 class="display-1 text-dark">Petstagram</h1>
+        <h2>Welcome @User.Identity.Name</h2>
+    </div>
+
+    <p>Since this is still in development we have 2 version for you to use depending if you want to take the time to upload Images and make Albums in order to use your photos. Otherwise we have a demo version that uses pre installed pictures in order to showcase the special photo viewing feature</p>
+
+    <a asp-controller="Pet" asp-action="Index" class="btn btn-primary btn-lg">Make My Own</a>
+    <a class="btn btn-primary btn-lg">Use Demo</a>
+} else
+{
+    <div class="text-center">
+        <h1 class="display-1 text-info">You are not logged in</h1>
+    </div>
+
+    <p>This application requires you to register in order to make your own Albums and Pet Pictures. Please press the button below to register/login or explore the demo that comes pre installed with pictures in order to showcase the app</p>
+
+    <a asp-action="Register" class="btn btn-primary btn-lg">Register</a>
+    <a asp-action="Login" class="btn btn-outline-primary btn-lg">Log in</a>
+    <br/>
+    <a class="btn btn-success btn-lg">Use Demo</a>
+}

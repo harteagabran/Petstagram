@@ -11,9 +11,12 @@
 </head>
 <body>
     <header>
-        <nav id="navigation" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb-3">
+        <nav id="navigation" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow">
             <div class="container-fluid">
-                <a class="navbar-brand custom-title" asp-area="" asp-controller="Home" asp-action="Index">Petstagram</a>
+                <a class="navbar-brand custom-title border-bottom border-primary pb-0" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/assets/diddy-base.png" class="rounded float-left" width="50" height="50" />
+                    Petstagram
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -26,6 +29,27 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        @using Microsoft.AspNetCore.Identity
+                        @inject SignInManager<User> signInManager
+                        @if(signInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <form method="post" asp-controller="Home" asp-action="Logout" asp-area="">
+                                    <span class="text-dark">@User.Identity.Name</span>
+                                    <input type="submit" value="Log Out" class="btn btn-secondary" />
+                                </form>
+                            </li>
+                        } else
+                        {
+                            <li class="nav-item">
+                                <a asp-action="Register" asp-controller="Home" asp-area="" class="nav-link">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-action="Login" asp-controller="Home" asp-area="" class="nav-link" asp-route-returnUrl="@Url.PageLink()">Login</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

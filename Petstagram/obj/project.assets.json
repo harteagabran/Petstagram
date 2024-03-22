@@ -4363,11 +4363,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kumar\\Source\\Repos\\Petstagram\\Petstagram\\Petstagram.csproj",
+      "projectUniqueName": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Petstagram.csproj",
       "projectName": "Petstagram",
-      "projectPath": "C:\\Users\\kumar\\Source\\Repos\\Petstagram\\Petstagram\\Petstagram.csproj",
+      "projectPath": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Petstagram.csproj",
       "packagesPath": "C:\\Users\\kumar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kumar\\Source\\Repos\\Petstagram\\Petstagram\\obj\\",
+      "outputPath": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",

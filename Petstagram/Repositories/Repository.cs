@@ -4,10 +4,10 @@ using Petstagram.Context;
 
 namespace Petstagram.Repositories
 {
-    public class DBRepository : IRepository
+    public class Repository : IRepository
     {
         private readonly PetContext _repo;
-        public DBRepository(PetContext repository) 
+        public Repository(PetContext repository) 
         {
             _repo = repository;
         }
@@ -70,6 +70,18 @@ namespace Petstagram.Repositories
             Pet pet = _repo.Pets.FirstOrDefault();
 
             return pet != null;
+        }
+
+        public void AddPic(Picture pic)
+        {
+            _repo.Pictures.Add(pic);
+            _repo.SaveChanges();
+        }
+
+        public void AddPet(Pet pet)
+        {
+            _repo.Pets.Add(pet);
+            _repo.SaveChanges();
         }
     }
 }

@@ -2,14 +2,12 @@
 
 namespace Petstagram.Models
 {
-    public class Pet
+    public class FormPet
     {
-        [Key]
+        [Required]
         public int Id { get; set; }
-
+        [Required(ErrorMessage = "a Name of the pet album must be given.")]
         public string Name { get; set; }
         public string OwnerId { get; set; }
-
-        public ICollection<Picture>? Pictures { get; set; }
     }
 }

@@ -10,6 +10,8 @@ namespace Petstagram.Repositories
         List<Picture> GetAllPicsByPet(Pet pet);
         List<Pet> GetAllPets();
         List<Pet> GetAllPetsByPic(Picture pic);
+        void AddPic(Picture pic);
+        void AddPet(Pet pet);
         void UpdatePic(Picture picture);
         void UpdatePet(Pet pet);
         void DeletePic(Picture pic);

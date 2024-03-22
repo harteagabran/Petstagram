@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Petstagram.Context;
 using Petstagram.Models;
+using Petstagram.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,9 @@ builder.Services.AddControllersWithViews();
 //DB Context
 var connectionString = builder.Configuration.GetConnectionString("MySqlConn");
 builder.Services.AddDbContext<PetContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+//Repository
+builder.Services.AddScoped<IRepository, Repository>();
 
 //Identity
 builder.Services.AddIdentity<User, IdentityRole>()
@@ -37,5 +41,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+await PetContext.CreateAdminuser(app.Services);
 
 app.Run();
