@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="~/css/main.css" />
 }
 
-<div class="text-center">
+<div class="text-center mt-4">
     <h1 class="display-4 custom-title">Petstagram</h1>
 </div>
 <div id="main-sec" class="menu d-flex flex-column justify-content-around">
@@ -15,11 +15,11 @@
             <p type="button" class="btn btn-secondary btn-lg" disabled>Add Photo</p>
         } else
         {
-            <a asp-action="AddPhoto" class="btn btn-primary btn-lg">Add Photo</a>
+            <a asp-action="AddPic" class="btn btn-dark btn-lg">Add Photo</a>
         }
 
-        <a asp-action="AddPet" class="btn btn-primary btn-lg">Add Pet</a>
-        <a asp-action="ViewPics" class="btn btn-primary btn-lg">View all Photos</a>
-        <a asp-action="ViewPets" class="btn btn-primary btn-lg">View all Pets</a>
+        <a asp-action="AddPet" class="btn btn-dark btn-lg">Add Album</a>
+        <a asp-action="ViewPics" class="btn btn-dark btn-lg">View all Photos</a>
+        <a asp-action="ViewPets" class="btn btn-dark btn-lg">View all Albums</a>
     }
 </div>

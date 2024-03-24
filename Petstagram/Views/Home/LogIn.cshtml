@@ -3,41 +3,38 @@
 @{
     ViewBag.Title = "Log In";
 }
+@section Styles {
+<link rel="stylesheet" href="~/css/form.css"/>
+}
 
-<h1>Log In</h1>
+<h1 class="custom-title mt-4">Log In</h1>
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-<form method="post" asp-action="LogIn">
-    <div class="form-group row">
-        <div class="col-sm-3 offset-1"><label>Username:</label></div>
-        <div class="col-sm-4">
-            <input asp-for="Username" class="form-control" required />
-        </div>
-        <div class="col">
+<form asp-action="Login" class="ps-4" method="post">
+    <div class="input-group input-group-lg w-50">
+        <span asp-for="Username" class="input-group-text">Username</span>
+        <input asp-for="Username" class="form-control" />
+        <div>
             <span asp-validation-for="Username" class="text-danger"></span>
         </div>
     </div>
-    <div class="form-group row">
-        <div class="col-sm-3 offset-1"><label>Password:</label></div>
-        <div class="col-sm-4">
-            <input type="password" asp-for="Password" class="form-control" required />
-        </div>
-        <div class="col">
+    <div class="input-group input-group-lg w-50 my-4">
+        <span asp-for="Password" class="input-group-text">Password</span>
+        <input asp-for="Password" type="password" class="form-control" />
+        <div>
             <span asp-validation-for="Password" class="text-danger"></span>
         </div>
     </div>
-    
-    <input asp-for="RememberMe" title="Remember Me" />
-    <label asp-for="RememberMe">Remember Me</label>
-
-    <div class="row">
-        <div class="offset-2 col-sm-4">
-            <button type="submit" class="btn btn-primary">Register</button>
+    <div class="input-group">
+        <div class="input-group-text">
+            <input asp-for="RememberMe" type="checkbox" class="form-check-input mt-0" aria-label="Checkbox for Remember Me"/>
         </div>
+        <span asp-for="RememberMe" class="input-group-text">Remember Me</span>
     </div>
-    <div class="row">
-        <div class="offset-2 col-sm-4">
-            Already registered? <a asp-action="Login">Login</a>
-        </div>
+
+    <div class="d-grid col-6 mt-4">
+        <button type="submit" class="btn btn-primary">Log In</button>
+        <span>Don't Have an Account? <a asp-action="Register" asp-controller="Home">Register</a></span>
     </div>
 </form>
+

@@ -1,27 +1,34 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<User> signInManager
 
+@{
+    ViewBag.Title = "Home Page";
+}
+
 @if(signInManager.IsSignedIn(User))
 {
-    <div class="text-center">
-        <h1 class="display-1 text-dark">Petstagram</h1>
+    <div class="text-center mt-4">
+        <h1 class="display-1 custom-title">Petstagram</h1>
         <h2>Welcome @User.Identity.Name</h2>
     </div>
 
-    <p>Since this is still in development we have 2 version for you to use depending if you want to take the time to upload Images and make Albums in order to use your photos. Otherwise we have a demo version that uses pre installed pictures in order to showcase the special photo viewing feature</p>
+    <p class="px-3 mb-3">Since this is still in development we have 2 version for you to use depending if you want to take the time to upload Images and make Albums in order to use your photos. Otherwise we have a demo version that uses pre installed pictures in order to showcase the special photo viewing feature</p>
 
-    <a asp-controller="Pet" asp-action="Index" class="btn btn-primary btn-lg">Make My Own</a>
-    <a class="btn btn-primary btn-lg">Use Demo</a>
+    <div class="d-flex justify-content-center">
+        <a asp-controller="Pet" asp-action="Index" class="btn btn-dark btn-lg">Make My Own</a>
+        <a class="btn btn-secondary btn-lg">Use Demo</a>
+    </div>
 } else
 {
     <div class="text-center">
         <h1 class="display-1 text-info">You are not logged in</h1>
     </div>
 
-    <p>This application requires you to register in order to make your own Albums and Pet Pictures. Please press the button below to register/login or explore the demo that comes pre installed with pictures in order to showcase the app</p>
+    <p class="px-3 mb-3">This application requires you to register in order to make your own Albums and Pet Pictures. Please press the button below to register/login or explore the demo that comes pre installed with pictures in order to showcase the app</p>
 
-    <a asp-action="Register" class="btn btn-primary btn-lg">Register</a>
-    <a asp-action="Login" class="btn btn-outline-primary btn-lg">Log in</a>
-    <br/>
-    <a class="btn btn-success btn-lg">Use Demo</a>
+    <div class="d-flex justify-content-center">
+        <a asp-action="Register" class="btn btn-dark btn-lg">Register</a>
+        <a asp-action="Login" class="btn btn-secondary btn-lg">Log in</a>
+        <a class="btn btn-success btn-lg">Use Demo</a>
+    </div>
 }

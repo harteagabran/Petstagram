@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\Petstagram.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\assets\\Diddy Bruh.jpg",
+      "PackagePath": "staticwebassets\\assets\\Diddy Bruh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\assets\\background.png",
+      "PackagePath": "staticwebassets\\assets\\background.png"
+    },
+    {
       "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\assets\\diddy-base.png",
       "PackagePath": "staticwebassets\\assets\\diddy-base.png"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\css\\form.css",
+      "PackagePath": "staticwebassets\\css\\form.css"
     },
     {
       "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\css\\main.css",
@@ -251,6 +263,18 @@
     {
       "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\petpictures\\a219f96d-2603-4c6e-ab4c-f9bdb29d2bd9.jpg",
+      "PackagePath": "staticwebassets\\petpictures\\a219f96d-2603-4c6e-ab4c-f9bdb29d2bd9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\petpictures\\ce88b1ae-6ccf-4879-a1fe-d4a922983826.jpg",
+      "PackagePath": "staticwebassets\\petpictures\\ce88b1ae-6ccf-4879-a1fe-d4a922983826.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\petpictures\\f31aedf6-4d21-4163-9b73-fb1dac2805ae.jpg",
+      "PackagePath": "staticwebassets\\petpictures\\f31aedf6-4d21-4163-9b73-fb1dac2805ae.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Petstagram.Microsoft.AspNetCore.StaticWebAssets.props",

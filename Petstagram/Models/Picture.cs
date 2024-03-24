@@ -16,6 +16,6 @@ namespace Petstagram.Models
         public DateTime UploadDate { get; set; }
 
         //Navigation for pictures that have multiple pets
-        public ICollection<Pet> Pets { get; set; }
+        public List<Pet> Pets { get; set; }
     }
 }

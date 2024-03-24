@@ -1,19 +1,22 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Petstagram</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Petstagram.styles.css" asp-append-version="true" />
-    @RenderSectionAsync("Styles", required: false)
+    @await RenderSectionAsync("Styles", required: false)
 </head>
 <body>
     <header>
         <nav id="navigation" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow">
             <div class="container-fluid">
-                <a class="navbar-brand custom-title border-bottom border-primary pb-0" asp-area="" asp-controller="Home" asp-action="Index">
+                <a class="navbar-brand custom-title pb-0" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/assets/diddy-base.png" class="rounded float-left" width="50" height="50" />
                     Petstagram
                 </a>
@@ -21,13 +24,19 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="navbar-collapse collapse d-flex justify-content-between">
+                    <ul id="main-nav" class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Pet" asp-action="AddPet">New Album</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Pet" asp-action="AddPic">New Photo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
@@ -37,7 +46,7 @@
                         {
                             <li class="nav-item">
                                 <form method="post" asp-controller="Home" asp-action="Logout" asp-area="">
-                                    <span class="text-dark">@User.Identity.Name</span>
+                                    <span class="text-light">@User.Identity.Name</span>
                                     <input type="submit" value="Log Out" class="btn btn-secondary" />
                                 </form>
                             </li>

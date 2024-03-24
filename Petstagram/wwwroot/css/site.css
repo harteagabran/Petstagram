@@ -19,17 +19,43 @@ html {
 
 body {
   margin-bottom: 60px;
-  height: 100vh;
-  background-color: yellow;
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url('../assets/background.png');
+  background-blend-mode: darken;
+  color: white;
+}
+
+footer {
+    background-color: black;
+}
+
+.navbar {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.nav-item {
+    height: 100%;
 }
 
 #navigation {
-    background-color: navajowhite;
-    border-bottom: 5px double blue;
-    border-left: 5px solid blue;
+    background-color: #606060;
+    background-image: linear-gradient(45deg, #606060 25%, #505050 25%, #505050 50%, #606060 50%, #606060 75%, #505050 75%, #505050 100%);
+    border-bottom: 5px double darkgrey;
+    border-left: 5px solid white;
     border-radius: 0 0 0 20px;
+}
+#main-nav > .nav-item:hover {
+    border-bottom: 2px solid yellow;
 }
 
 .custom-title {
-    color: darkred;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight:400;
+    font-style: normal;
+}
+
+.btn-dark {
+    outline: 1px solid gray;
 }

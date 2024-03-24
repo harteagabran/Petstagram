@@ -1,0 +1,26 @@
+﻿.form-group {
+    height: 50vh;
+    width: 33vw;
+}
+.custom-input, #custom-textarea {
+    width: 500px;
+    background-color: black !important;
+}
+
+.custom-input:focus {
+    background-color: black;
+    color: white;
+}
+#custom-textarea {
+    height: 300px;
+}
+#custom-textarea:focus {
+    color: white;
+}
+.form-select, .input-group-text {
+    background-color: black !important;
+    color: white !important;
+}
+.form-select > * {
+    padding-left: 5%;
+}

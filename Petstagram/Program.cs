@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Petstagram.Context;
 using Petstagram.Models;
 using Petstagram.Repositories;
+using Petstagram.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,10 +17,16 @@ builder.Services.AddDbContext<PetContext>(options => options.UseMySql(connection
 //Repository
 builder.Services.AddScoped<IRepository, Repository>();
 
+//HTML Sanitizer
+builder.Services.AddScoped<HtmlSanitizerService>();
+
 //Identity
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<PetContext>()
     .AddDefaultTokenProviders();
+
+//Change login pagth
+builder.Services.ConfigureApplicationCookie(opt => opt.LoginPath = "/Home/Login");
 
 var app = builder.Build();
 
@@ -36,6 +43,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

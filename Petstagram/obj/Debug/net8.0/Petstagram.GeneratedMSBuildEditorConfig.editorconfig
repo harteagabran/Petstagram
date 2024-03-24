@@ -22,8 +22,8 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Home/LogIn.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dJbi5jc2h0bWw=
+[C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Home/Privacy.cshtml]
@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Pet/EditPet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGV0XEVkaXRQZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Pet/EditPic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGV0XEVkaXRQaWMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Pet/Index.cshtml]

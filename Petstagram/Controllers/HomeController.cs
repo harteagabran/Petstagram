@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Petstagram.Models;
+using Petstagram.Services;
 using System.Diagnostics;
 
 namespace Petstagram.Controllers
@@ -10,9 +11,11 @@ namespace Petstagram.Controllers
         private readonly ILogger<HomeController> _logger;
         private UserManager<User> _userManager;
         private SignInManager<User> _signInManager;
+        private HtmlSanitizerService _html;
 
-        public HomeController(UserManager<User> user, SignInManager<User> signIn ,ILogger<HomeController> logger)
+        public HomeController(UserManager<User> user, SignInManager<User> signIn ,ILogger<HomeController> logger, HtmlSanitizerService html)
         {
+            _html = html;
             _userManager = user;
             _signInManager = signIn;
             _logger = logger;
@@ -31,7 +34,7 @@ namespace Petstagram.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(FormRegister model)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && _html.IsValid(model.Username) && _html.IsValid(model.Password))
             {
                 var user = new User { UserName = model.Username };
                 var result = await _userManager.CreateAsync(user, model.Password);
@@ -44,6 +47,15 @@ namespace Petstagram.Controllers
                     foreach(var error in result.Errors)
                     {
                         ModelState.AddModelError(string.Empty, error.Description);
+                        if(!_html.IsValid(model.Username))
+                        {
+                            ModelState.AddModelError("Username", "Username cannot contain <, >, &, ', or \"");
+                        }
+
+                        if(!_html.IsValid(model.Password))
+                        {
+                            ModelState.AddModelError("Password", "Password cannot contain <, >, &, ', or \"");
+                        }
                     }
                 }
             }
@@ -58,13 +70,13 @@ namespace Petstagram.Controllers
         }
 
         [HttpGet]
-        public IActionResult LogIn(string returnUrl = "")
+        public IActionResult Login(string returnUrl = "")
         {
             var model = new FormLogIn { ReturnUrl = returnUrl };
             return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult> LogIn(FormLogIn model)
+        public async Task<IActionResult> Login(FormLogIn model)
         {
             if (ModelState.IsValid)
             {

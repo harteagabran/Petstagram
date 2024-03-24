@@ -4,25 +4,28 @@
     ViewBag.Title = "Album Form";
 }
 
-<h1>@ViewBag.Action Album</h1>
+@section Styles {
+    <link href="~/css/form.css" rel="stylesheet" />
+}
+
+<h1 class="custom-title mt-4">@ViewBag.Action Album</h1>
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 <form method="post" asp-action="EditPet">
-    <div class="form-group row">
+    <div class="row mb-3">
         <input type="hidden" asp-for="Id" />
         <input type="hidden" asp-for="OwnerId" />
-        <div class="col-sm-3 offset-1"><label>Name:</label></div>
+        <div class="col-sm-3 offset-1"><label class="control-label display-6">Name:</label></div>
         <div class="col-sm-4">
-            <input asp-for="Name" class="form-control" placeholder="Name of Pet" required />
+            <input asp-for="Name" class="form-control form-control-lg" placeholder="Name of Pet" required />
         </div>
         <div class="col">
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
     </div>
 
-    <div class="row">
-        <div class="offset-2 col-sm-4">
-            <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
-        </div>
+    <div class="d-grid gap-2 col-4 mx-auto mt-4">
+        <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
     </div>
 </form>
