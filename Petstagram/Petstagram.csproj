@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Data\" />
     <Folder Include="wwwroot\petpictures\" />
   </ItemGroup>
 

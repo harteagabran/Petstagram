@@ -19,11 +19,13 @@ html {
 
 body {
   margin-bottom: 60px;
-  height: 90vh;
+  width: 100vw;
+  min-height: 90vh;
   background-color: rgba(0, 0, 0, 0.8);
   background-image: url('../assets/background.png');
   background-blend-mode: darken;
   color: white;
+  overflow-y: hidden;
 }
 
 footer {

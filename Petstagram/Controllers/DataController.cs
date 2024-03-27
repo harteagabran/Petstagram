@@ -15,7 +15,15 @@ namespace Petstagram.Controllers
         public IActionResult ShowPics()
         {
             List<Picture> pics = _db.GetAllPics();
-            return View(pics);
+            ViewBag.Pics = pics;
+            return View();
+        }
+
+        public IActionResult DetailPic(int id)
+        {
+            Picture pic = _db.GetPicById(id);
+            ViewBag.Pic = pic;
+            return View();
         }
     }
 }

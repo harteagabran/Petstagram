@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\main.css"
     },
     {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\css\\showings.css",
+      "PackagePath": "staticwebassets\\css\\showings.css"
+    },
+    {
       "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

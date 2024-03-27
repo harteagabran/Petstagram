@@ -14,43 +14,44 @@
 </head>
 <body>
     <header>
-        <nav id="navigation" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow">
+        <nav id="navigation" class="navbar navbar-expand-sm navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand custom-title pb-0" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/assets/diddy-base.png" class="rounded float-left" width="50" height="50" />
                     Petstagram
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-flex justify-content-between">
-                    <ul id="main-nav" class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="main-nav" class="navbar-nav me-auto mb-2 mb-sm-0">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Pet" asp-action="AddPet">New Album</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Pet" asp-action="AddPet">New Album</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Pet" asp-action="AddPic">New Photo</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Pet" asp-action="AddPic">New Photo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
                         @using Microsoft.AspNetCore.Identity
                         @inject SignInManager<User> signInManager
-                        @if(signInManager.IsSignedIn(User))
+                        @if (signInManager.IsSignedIn(User))
                         {
                             <li class="nav-item">
                                 <form method="post" asp-controller="Home" asp-action="Logout" asp-area="">
-                                    <span class="text-light">@User.Identity.Name</span>
+                                    <span class="text-dark">@User.Identity.Name</span>
                                     <input type="submit" value="Log Out" class="btn btn-secondary" />
                                 </form>
                             </li>
-                        } else
+                        }
+                        else
                         {
                             <li class="nav-item">
                                 <a asp-action="Register" asp-controller="Home" asp-area="" class="nav-link">Register</a>
@@ -63,6 +64,7 @@
                 </div>
             </div>
         </nav>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">

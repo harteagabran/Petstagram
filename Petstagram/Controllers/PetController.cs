@@ -75,6 +75,12 @@ namespace Petstagram.Controllers
         [HttpGet]
         public IActionResult AddPic()
         {
+            //if no pets redirect to Pets form
+            if(!_db.HasPetData())
+            {
+                return RedirectToAction("AddPet");
+            }
+
             var model = new FormPicture();
 
             ViewBag.Action = "Add";

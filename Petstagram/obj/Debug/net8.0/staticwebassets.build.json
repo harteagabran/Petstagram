@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nvPIEnwCCDjrleBn9FR7dNdOWd5DTecBrFG8JzpPplU=",
+  "Hash": "xU8eGKoUhzHYjdJxh0wujRFuvz36sjcboYcpdPXD7J4=",
   "Source": "Petstagram",
   "BasePath": "_content/Petstagram",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\main.css"
+    },
+    {
+      "Identity": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\css\\showings.css",
+      "SourceId": "Petstagram",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\",
+      "BasePath": "_content/Petstagram",
+      "RelativePath": "css/showings.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\showings.css"
     },
     {
       "Identity": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\css\\site.css",
