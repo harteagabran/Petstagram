@@ -15,6 +15,7 @@
     <div class="row mb-3">
         <input type="hidden" asp-for="Id" />
         <input type="hidden" asp-for="OwnerId" />
+        <input type="hidden" asp-for="Previous" />
         <div class="col-sm-3 offset-1"><label class="control-label display-6">Name:</label></div>
         <div class="col-sm-4">
             <input asp-for="Name" class="form-control form-control-lg" placeholder="Name of Pet" required />
@@ -26,6 +27,6 @@
 
     <div class="d-grid gap-2 col-4 mx-auto mt-4">
         <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
-        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        <a role="button" href="@Model.Previous" class="btn btn-secondary">Cancel</a>
     </div>
 </form>

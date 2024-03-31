@@ -14,6 +14,7 @@ namespace Petstagram.Models
 
         [DataType(DataType.Date)]
         public DateTime UploadDate { get; set; }
+        public DateTime LastModified { get; set; }
 
         //Navigation for pictures that have multiple pets
         public List<Pet> Pets { get; set; }

@@ -12,8 +12,8 @@ using Petstagram.Context;
 namespace Petstagram.Migrations
 {
     [DbContext(typeof(PetContext))]
-    [Migration("20240322024930_Petsnull")]
-    partial class Petsnull
+    [Migration("20240330145319_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -208,6 +208,9 @@ namespace Petstagram.Migrations
                     b.Property<string>("FileName")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<DateTime>("LastModified")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Story")
                         .IsRequired()

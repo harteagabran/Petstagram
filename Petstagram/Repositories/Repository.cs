@@ -29,9 +29,9 @@ namespace Petstagram.Repositories
             return _repo.Pets.Include(p => p.Pictures).ToList();
         }
 
-        public List<Pet> GetAllPetsByPic(Picture pic)
+        public List<Pet> GetAllPetsByOwner(string owner)
         {
-            throw new NotImplementedException();
+            return _repo.Pets.Include(p => p.Pictures).Where(p => p.OwnerId == owner).ToList();
         }
 
         public List<Picture> GetAllPics()
@@ -41,7 +41,7 @@ namespace Petstagram.Repositories
 
         public List<Picture> GetAllPicsByPet(Pet pet)
         {
-            throw new NotImplementedException();
+            return _repo.Pictures.Where(p => p.Pets.Contains(pet)).ToList();
         }
 
         public Pet GetPetById(int id)
@@ -51,7 +51,7 @@ namespace Petstagram.Repositories
 
         public Picture GetPicById(int id)
         {
-            return _repo.Pictures.Find(id);
+            return _repo.Pictures.Include(p => p.Pets).FirstOrDefault(p => p.Id == id);
         }
 
         public void UpdatePet(Pet pet)
@@ -82,6 +82,11 @@ namespace Petstagram.Repositories
         {
             _repo.Pets.Add(pet);
             _repo.SaveChanges();
+        }
+
+        public List<Picture> GetAllPicsByOwner(string owner)
+        {
+            return _repo.Pictures.Include(p => p.Pets).Where(p => p.Pets.Any(pet => pet.OwnerId == owner)).ToList();
         }
     }
 }

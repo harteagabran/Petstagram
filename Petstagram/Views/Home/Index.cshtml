@@ -15,8 +15,8 @@
     <p class="px-3 mb-3">Since this is still in development we have 2 version for you to use depending if you want to take the time to upload Images and make Albums in order to use your photos. Otherwise we have a demo version that uses pre installed pictures in order to showcase the special photo viewing feature</p>
 
     <div class="d-flex justify-content-center">
-        <a asp-controller="Pet" asp-action="Index" class="btn btn-dark btn-lg">Make My Own</a>
-        <a class="btn btn-secondary btn-lg">Use Demo</a>
+        <a role="button" asp-controller="Pet" asp-action="Index" class="btn btn-dark btn-lg">Make My Own</a>
+        <a role="button" class="btn btn-secondary btn-lg">Use Demo</a>
     </div>
 } else
 {
@@ -27,8 +27,8 @@
     <p class="px-3 mb-3">This application requires you to register in order to make your own Albums and Pet Pictures. Please press the button below to register/login or explore the demo that comes pre installed with pictures in order to showcase the app</p>
 
     <div class="d-flex justify-content-center">
-        <a asp-action="Register" class="btn btn-dark btn-lg">Register</a>
-        <a asp-action="Login" class="btn btn-secondary btn-lg">Log in</a>
-        <a class="btn btn-success btn-lg">Use Demo</a>
+        <a role="button" asp-action="Register" class="btn btn-dark btn-lg">Register</a>
+        <a role="button" asp-action="Login" class="btn btn-secondary btn-lg">Log in</a>
+        <a role="button" class="btn btn-success btn-lg">Use Demo</a>
     </div>
 }

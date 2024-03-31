@@ -1,0 +1,21 @@
+﻿@model Picture
+@{
+    ViewData["Title"] = "Delete Pic";
+}
+
+
+<h1 class="custom-title mt-4">Delete @Model.DisplayName</h1>
+
+<p>Are you sure you want to delete @Model.DisplayName?</p>
+
+<form asp-controller="Pet" asp-action="DeletePic" method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="DisplayName" />
+    <input type="hidden" asp-for="FileName" />
+    <input type="hidden" asp-for="UploadDate" />
+    <input type="hidden" asp-for="Story" />
+    <input type="hidden" asp-for="LastModified" />
+    <input type="hidden" asp-for="Pets" />
+    <button class="btn btn-danger" type="submit">Delete</button>
+    <a class="btn btn-primary" asp-action="ShowPics" asp-controller="Data">Cancel</a>
+</form>

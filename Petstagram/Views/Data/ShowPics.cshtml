@@ -1,6 +1,5 @@
 ﻿@{
     ViewData["Title"] = "ShowPics";
-    ViewData["Container"] = "-fluid";
 }
 
 @section Styles {
@@ -14,9 +13,9 @@
     <div class="card-container mt-3">
         @foreach (var picture in ViewBag.Pics)
         {
-            <a asp-action="DetailPic" asp-route-id="@picture.Id" class="card mb-3">
+            <a asp-action="DetailPic" asp-route-id="@picture.Id" asp-route-prevUrl="@Url.PageLink()" class="card mb-3">
                 <div class="card-img-holder">
-                    <img src="~/petpictures/@picture.FileName" class="card-img-top custom-card-img">
+                    <img src="~/petpictures/@picture.FileName?t=@picture.LastModified.Ticks" class="card-img-top custom-card-img bg-dark">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">@Html.Raw(picture.DisplayName)</h5>
@@ -30,6 +29,6 @@ else
 {
     <div class="text-center">
         <h1 class="display-1 text-info">No Pictures here to show.</h1>
-        <a asp-controller="Pet" asp-action="AddPic" class="btn btn-link btn-lg">Add Photo</a>
+        <a role="button" asp-controller="Pet" asp-action="AddPic" class="btn btn-link btn-lg">Add Photo</a>
     </div>
 }

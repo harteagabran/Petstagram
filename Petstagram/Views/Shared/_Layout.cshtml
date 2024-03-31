@@ -27,26 +27,32 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul id="main-nav" class="navbar-nav me-auto mb-2 mb-sm-0">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Pet" asp-action="AddPet">New Album</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Pet" asp-action="AddPet">New Album</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Pet" asp-action="AddPic">New Photo</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Pet" asp-action="AddPic">New Photo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Data" asp-action="ShowPets">View Albums</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Data" asp-action="ShowPics">View Photos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav mb-sm-0">
                         @using Microsoft.AspNetCore.Identity
                         @inject SignInManager<User> signInManager
                         @if (signInManager.IsSignedIn(User))
                         {
                             <li class="nav-item">
                                 <form method="post" asp-controller="Home" asp-action="Logout" asp-area="">
-                                    <span class="text-dark">@User.Identity.Name</span>
+                                    <span class="text-light">@User.Identity.Name</span>
                                     <input type="submit" value="Log Out" class="btn btn-secondary" />
                                 </form>
                             </li>
@@ -66,7 +72,7 @@
         </nav>
 
     </header>
-    <div class="container">
+    <div id="main-container" class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

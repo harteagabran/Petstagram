@@ -9,7 +9,7 @@ namespace Petstagram.Repositories
         List<Picture> GetAllPics();
         List<Picture> GetAllPicsByPet(Pet pet);
         List<Pet> GetAllPets();
-        List<Pet> GetAllPetsByPic(Picture pic);
+        List<Pet> GetAllPetsByOwner(string owner);
         void AddPic(Picture pic);
         void AddPet(Pet pet);
         void UpdatePic(Picture picture);
@@ -17,5 +17,6 @@ namespace Petstagram.Repositories
         void DeletePic(Picture pic);
         void DeletePet(Pet pet);
         bool HasPetData();
+        List<Picture> GetAllPicsByOwner(string owner);
     }
 }

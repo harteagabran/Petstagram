@@ -1,0 +1,27 @@
+﻿@model Picture
+@{
+    ViewData["Title"] = "Display";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/display.css" />
+}
+@section Scripts {
+    <script src="~/js/display.js"></script>
+}
+
+<div id="picture-holder" class="mx-auto">
+    <img class="img-fluid" src="~/petpictures/@Model.FileName" />
+
+    <!--Overlay-->
+    <div id="overlay" class="fade show">
+        <div class="container mx-auto">
+            <a role="button" class="btn btn-close btn-close-white btn-lg float-end p-4" id="close-overlay" aria-expanded="false" aria-controls="overlay"></a>
+            <div class="text-center">
+                <h1 id="name" class="text-light">@Html.Raw(Model.DisplayName)</h1>
+                <i id="date" class="text-secondary">@Model.UploadDate</i>
+                <hr class="border border-secondary border-2 opacity-50" />
+            </div>
+            <p id="story" class="text-light">@Html.Raw(Model.Story)</p>
+        </div>
+    </div>
+</div>

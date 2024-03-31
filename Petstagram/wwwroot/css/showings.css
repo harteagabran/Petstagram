@@ -42,3 +42,13 @@ main {
 .card:hover {
     outline: 1px solid yellow;
 }
+
+.accordion-header {
+    border: 1px solid white;
+}
+
+.list-group-item:hover {
+    background-color: darkgrey;
+    border: 1px solid white;
+    cursor: pointer;
+}

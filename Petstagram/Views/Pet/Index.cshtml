@@ -15,11 +15,12 @@
             <p type="button" class="btn btn-secondary btn-lg" disabled>Add Photo</p>
         } else
         {
-            <a asp-action="AddPic" class="btn btn-dark btn-lg">Add Photo</a>
+            <a role="button" asp-action="AddPic" class="btn btn-dark btn-lg">Add Photo</a>
         }
 
-        <a asp-action="AddPet" class="btn btn-dark btn-lg">Add Album</a>
-        <a asp-controller="Data" asp-action="ShowPics" class="btn btn-dark btn-lg">View all Photos</a>
-        <a asp-action="ViewPets" class="btn btn-dark btn-lg">View all Albums</a>
+        <a role="button" asp-action="AddPet" class="btn btn-dark btn-lg">Add Album</a>
+        <a role="button" asp-controller="Data" asp-action="ShowPics" class="btn btn-dark btn-lg">View all Photos</a>
+        <a role="button" asp-controller="Data" asp-action="ShowPets" class="btn btn-dark btn-lg">View all Albums</a>
+        <a role="button" asp-controller="Graph" asp-action="Index" class="btn btn-primary btn-lg">Start Special View</a>
     }
 </div>

@@ -206,6 +206,9 @@ namespace Petstagram.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<DateTime>("LastModified")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("Story")
                         .IsRequired()
                         .HasColumnType("longtext");

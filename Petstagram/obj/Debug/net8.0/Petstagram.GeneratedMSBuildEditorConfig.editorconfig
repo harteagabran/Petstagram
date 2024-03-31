@@ -18,8 +18,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Data/DetailPic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YVxEZXRhaWxQaWMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Data/ShowPets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YVxTaG93UGV0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Data/ShowPics.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YVxTaG93UGljcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Graph/Display.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhcGhcRGlzcGxheS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Graph/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhcGhcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Home/Index.cshtml]
@@ -36,6 +52,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Pet/DeletePet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGV0XERlbGV0ZVBldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Pet/DeletePic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGV0XERlbGV0ZVBpYy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Views/Pet/EditPet.cshtml]

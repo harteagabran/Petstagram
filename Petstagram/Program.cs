@@ -19,6 +19,8 @@ builder.Services.AddScoped<IRepository, Repository>();
 
 //HTML Sanitizer
 builder.Services.AddScoped<HtmlSanitizerService>();
+//Structure and Sort
+builder.Services.AddScoped<StructureService>();
 
 //Identity
 builder.Services.AddIdentity<User, IdentityRole>()
@@ -27,6 +29,9 @@ builder.Services.AddIdentity<User, IdentityRole>()
 
 //Change login pagth
 builder.Services.ConfigureApplicationCookie(opt => opt.LoginPath = "/Home/Login");
+
+//session
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -42,6 +47,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseSession();
 
 app.UseAuthentication();
 app.UseAuthorization();

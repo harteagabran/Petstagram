@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "ShowPics";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/showings.css" />
+}
+
+<a role="button" class="btn btn-dark btn-lg float-start text-light w-10" asp-action="Index" asp-controller="Pet">&#8592; Back</a>
+@if (ViewBag.Pets != null)
+{
+    <h1 class="text-center custom-title mt-4">Photos</h1>
+    <div class="accordion-body accordion-flush" id="accordion">
+        @foreach (var item in ViewBag.Pets)
+        {
+            <div class="accordion-item bg-dark">
+                <h2 class="accordion-header ps-2 d-flex justify-content-around">
+                    <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#pet-@item.Id" aria-expanded="false" aria-controls="pet-@item.Id">
+                        @item.Name <span class="badge bg-secondary text-light mx-4">@item.Pictures.Count</span>
+                    </button>
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <a role="button" asp-action="EditPet" asp-controller="Pet" asp-route-id="@item.Id" asp-route-prevUrl="@Url.PageLink()" class="btn btn-secondary">Edit</a>
+                        <a role="button" asp-action="DeletePet" asp-controller="Pet" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    </div>
+                </h2>
+                <div id="pet-@item.Id" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                    <ul class="accordion-body list-group list-group-flush ps-4">
+                        @foreach (var image in item.Pictures)
+                        {
+                            <a asp-action="DetailPic" asp-controller="Data" asp-route-id="@image.Id" asp-route-prevUrl="@Url.PageLink()">
+                            <li class="list-group-item bg-secondary ps-4 text-light text-decoration-none">@Html.Raw(image.DisplayName)</li></a>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <h1 class="display-1 text-info">No Albums here to show.</h1>
+        <a role="button" asp-controller="Pet" asp-action="AddPet" class="btn btn-link btn-lg">Add Photo</a>
+    </div>
+}

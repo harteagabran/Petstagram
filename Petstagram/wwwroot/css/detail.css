@@ -1,0 +1,15 @@
+﻿#picture-sect {
+    height: 80vh;
+}
+#picture-details {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    & > #story {
+        flex: 1 0 auto;  
+        max-height: 40vh;
+        overflow-y: scroll;
+    }
+}
