@@ -31,6 +31,7 @@
                 <label class="form-check-label" asp-for="Replace">Change Picture</label>
             </div>
             <div class="input-group mb-3 collapse" id="upload-picture">
+                <span asp-validation-for="Picture" class="text-danger"></span>
                 <input class="form-control form-control-lg" asp-for="Picture" type="file" accept="image/png, image/jpg, image/jpeg" />
             </div>
         </div>

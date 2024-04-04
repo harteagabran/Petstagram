@@ -216,6 +216,10 @@ namespace Petstagram.Controllers
 
             ViewBag.Pets = _db.GetAllPets().ToList();
             ViewBag.Action = (fpic.Id == 0) ? "Add" : "Edit";
+            if(fpic.Picture == null && fpic.Replace)
+            {
+                ModelState.AddModelError("Picture", "Picture cannot be empty");
+            }
 
             return View(fpic);
         }

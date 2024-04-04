@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sv/T+58rtqxH+1x8S8taFAenANqCd9K9heacLegmlKQ=",
+  "Hash": "E8h/mEVTvWlJkYSbJDT/+V3B7smBKD8vKEMfvSHRq+A=",
   "Source": "Petstagram",
   "BasePath": "_content/Petstagram",
   "Mode": "Default",
@@ -1554,6 +1554,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\petpictures\\c031d39f-baa7-400f-9714-13f88fd4c289.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\petpictures\\df86bd75-ee95-486d-ab28-222a47072824.jpg",
+      "SourceId": "Petstagram",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\",
+      "BasePath": "_content/Petstagram",
+      "RelativePath": "petpictures/df86bd75-ee95-486d-ab28-222a47072824.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\petpictures\\df86bd75-ee95-486d-ab28-222a47072824.jpg"
     },
     {
       "Identity": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\petpictures\\ee1edccd-77bb-4fa9-bb37-5459291e6d49.png",
