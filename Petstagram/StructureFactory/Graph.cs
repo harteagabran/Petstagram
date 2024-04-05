@@ -35,7 +35,7 @@ namespace Petstagram.StructureFactory
             return Vertices.Find(v => v.Id == id);
         }
 
-        private Vertex GetRandomVertex()
+        public Vertex GetRandomVertex()
         {
             Random random = new Random();
             int index = random.Next(0, Vertices.Count);
@@ -56,6 +56,18 @@ namespace Petstagram.StructureFactory
         public List<Edge> GetEdgesOfVertex(Vertex vertex)
         {
             return Edges.FindAll(e => e.Start == vertex.Id || e.End == vertex.Id);
+        }
+
+        public void SetVisited(Vertex vertex)
+        {
+            vertex.Visited = true;
+        }
+
+        public string GetVisited()
+        {
+            int total = Vertices.Count;
+            int visited = Vertices.FindAll(v => v.Visited == true).Count;
+            return $"{visited}/{total}";
         }
     }
 }

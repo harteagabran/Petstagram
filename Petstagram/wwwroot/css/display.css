@@ -43,3 +43,64 @@
 .btn-close {
     color: white;
 }
+
+/*Buttons*/
+.visited {
+    background-color: dimgray;
+    font-size: 7em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 1%;
+    position: absolute;
+}
+.arrow-sign {
+    background-color: black !important;
+    font-size: 7em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 1%;
+    position: absolute;
+}
+.left {
+    top: 40%;
+    left: 10%;
+    border-left: 2px solid white;
+}
+
+.right {
+    top: 40%;
+    right: 10%;
+    border-right: 2px solid white;
+}
+
+.topleft {
+    top: 10%;
+    left: 12%;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    transform: rotate(25deg)
+}
+.topright {
+    top: 10%;
+    right: 12%;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    transform: rotate(-25deg);
+}
+
+.bottomleft {
+    bottom: 10%;
+    left: 12%;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-20deg)
+}
+.bottomright {
+    bottom: 10%;
+    right: 12%;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(20deg);
+}

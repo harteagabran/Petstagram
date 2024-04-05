@@ -40,18 +40,62 @@ namespace Petstagram.Controllers
             var factory = new GraphFactory();
             Graph graph = factory.CreateGraph(pics);
 
+            //get random vertex and go to display page
+            Vertex currVertex = graph.GetRandomVertex();
+            graph.SetVisited(currVertex);
+            Picture pic = currVertex.Pic;
+            int vid = currVertex.Id;
+            List<Edge> edges = graph.GetEdgesOfVertex(currVertex);
+            List<Vertex> connections = new List<Vertex>();
+
+            //Loop through edges and add the vertex to the list
+            foreach (Edge e in edges)
+            {
+                if (vid == e.Start)
+                {
+                    connections.Add(graph.GetVertex(e.End));
+                }
+                else
+                {
+                    connections.Add(graph.GetVertex(e.Start));
+                }
+            }
             //save graph to session
+            ViewBag.Specs = graph.GetVisited();
             HttpContext.Session.SetObject(g_key, graph);
 
-            //get random vertex and go to display page
-            Picture pic = graph.GetRandomPic();
+            ViewBag.Connections = connections;
 
             return View("Display", pic);
         }
 
         public IActionResult Display(int id)
         {
-            var model = _db.GetPicById(id);
+            Graph graph = HttpContext.Session.GetObject<Graph>(g_key);
+            Vertex currVertex = graph.GetVertex(id);
+            List<Edge> edges = graph.GetEdgesOfVertex(currVertex);
+            List<Vertex> connections = new List<Vertex>();
+            //if already visited, skip showing story
+            graph.SetVisited(currVertex);
+
+            //Loop through edges and add the vertex to the list
+            foreach(Edge e in edges)
+            {
+                if(id == e.Start)
+                {
+                    connections.Add(graph.GetVertex(e.End));
+                } else
+                {
+                    connections.Add(graph.GetVertex(e.Start));
+                }
+            }
+
+            //save graph to session
+            HttpContext.Session.SetObject(g_key, graph);
+
+            var model = currVertex.Pic;
+            ViewBag.Specs = graph.GetVisited();
+            ViewBag.Connections = connections;
             return View(model);
         }
     }
