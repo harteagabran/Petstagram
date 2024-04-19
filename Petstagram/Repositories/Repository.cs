@@ -14,6 +14,10 @@ namespace Petstagram.Repositories
 
         public void DeletePet(Pet pet)
         {
+            //delete all pictures related to this pet
+            var picturesToDelete = _repo.Pictures.Where(x => x.Pets.Count == 1 && x.Pets.Contains(pet)).ToList();
+
+            _repo.Pictures.RemoveRange(picturesToDelete);
             _repo.Pets.Remove(pet);
             _repo.SaveChanges();
         }
@@ -65,9 +69,9 @@ namespace Petstagram.Repositories
             _repo.Pictures.Update(picture);
             _repo.SaveChanges();
         }
-        public bool HasPetData()
+        public bool HasPetData(string owner)
         {
-            Pet pet = _repo.Pets.FirstOrDefault();
+            Pet pet = _repo.Pets.FirstOrDefault(p => p.OwnerId == owner);
 
             return pet != null;
         }
@@ -87,6 +91,11 @@ namespace Petstagram.Repositories
         public List<Picture> GetAllPicsByOwner(string owner)
         {
             return _repo.Pictures.Include(p => p.Pets).Where(p => p.Pets.Any(pet => pet.OwnerId == owner)).ToList();
+        }
+
+        public List<Pet> GetAllPetsFromPic(Picture pic)
+        {
+            return _repo.Pets.Where(p => p.Pictures.Any(picture => picture.Id == pic.Id)).ToList();
         }
     }
 }

@@ -7,9 +7,9 @@
 }
 
 <a role="button" class="btn btn-dark btn-lg float-start text-light w-10" asp-action="Index" asp-controller="Pet">&#8592; Back</a>
-@if (ViewBag.Pets != null)
+@if (ViewBag.Pets.Count > 0)
 {
-    <h1 class="text-center custom-title mt-4">Photos</h1>
+    <h1 class="text-center custom-title mt-4">Albums</h1>
     <div class="accordion-body accordion-flush" id="accordion">
         @foreach (var item in ViewBag.Pets)
         {
@@ -40,6 +40,6 @@ else
 {
     <div class="text-center">
         <h1 class="display-1 text-info">No Albums here to show.</h1>
-        <a role="button" asp-controller="Pet" asp-action="AddPet" class="btn btn-link btn-lg">Add Photo</a>
+        <a role="button" asp-controller="Pet" asp-action="AddPet" class="btn btn-link btn-lg">Add Album</a>
     </div>
 }

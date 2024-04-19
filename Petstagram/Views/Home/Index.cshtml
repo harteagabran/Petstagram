@@ -5,22 +5,7 @@
     ViewBag.Title = "Home Page";
 }
 
-@if(signInManager.IsSignedIn(User))
-{
-    <div class="text-center mt-4">
-        <h1 class="display-1 custom-title">Petstagram</h1>
-        <h2>Welcome @User.Identity.Name</h2>
-    </div>
-
-    <p class="px-3 mb-3">Since this is still in development we have 2 version for you to use depending if you want to take the time to upload Images and make Albums in order to use your photos. Otherwise we have a demo version that uses pre installed pictures in order to showcase the special photo viewing feature</p>
-
-    <div class="d-flex justify-content-center">
-        <a role="button" asp-controller="Pet" asp-action="Index" class="btn btn-dark btn-lg">Make My Own</a>
-        <a role="button" class="btn btn-secondary btn-lg">Use Demo</a>
-    </div>
-} else
-{
-    <div class="text-center">
+<div class="text-center">
         <h1 class="display-1 text-info">You are not logged in</h1>
     </div>
 
@@ -29,6 +14,5 @@
     <div class="d-flex justify-content-center">
         <a role="button" asp-action="Register" class="btn btn-dark btn-lg">Register</a>
         <a role="button" asp-action="Login" class="btn btn-secondary btn-lg">Log in</a>
-        <a role="button" class="btn btn-success btn-lg">Use Demo</a>
+        <a role="button" asp-area="Demo" asp-controller="Demo" asp-action="Index" class="btn btn-success btn-lg">Use Demo</a>
     </div>
-}

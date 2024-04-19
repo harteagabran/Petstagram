@@ -45,6 +45,78 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\balto (1).jpg",
+      "PackagePath": "staticwebassets\\demo\\balto (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\balto (2).jpg",
+      "PackagePath": "staticwebassets\\demo\\balto (2).jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\balto (3).jpg",
+      "PackagePath": "staticwebassets\\demo\\balto (3).jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\balto (4).jpg",
+      "PackagePath": "staticwebassets\\demo\\balto (4).jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\balto (5).jpg",
+      "PackagePath": "staticwebassets\\demo\\balto (5).jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\cat (1).jpg",
+      "PackagePath": "staticwebassets\\demo\\cat (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\cat (2).jpg",
+      "PackagePath": "staticwebassets\\demo\\cat (2).jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\cat (3).jpg",
+      "PackagePath": "staticwebassets\\demo\\cat (3).jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\cat (4).jpg",
+      "PackagePath": "staticwebassets\\demo\\cat (4).jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\diddy (1).png",
+      "PackagePath": "staticwebassets\\demo\\diddy (1).png"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\diddy (2).png",
+      "PackagePath": "staticwebassets\\demo\\diddy (2).png"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\diddy (3).png",
+      "PackagePath": "staticwebassets\\demo\\diddy (3).png"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\diddy (4).png",
+      "PackagePath": "staticwebassets\\demo\\diddy (4).png"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\diddy (5).png",
+      "PackagePath": "staticwebassets\\demo\\diddy (5).png"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\diddy (6).png",
+      "PackagePath": "staticwebassets\\demo\\diddy (6).png"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\diddy (7).png",
+      "PackagePath": "staticwebassets\\demo\\diddy (7).png"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\diddy (8).jpg",
+      "PackagePath": "staticwebassets\\demo\\diddy (8).jpg"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\demo\\diddy (9).jpg",
+      "PackagePath": "staticwebassets\\demo\\diddy (9).jpg"
+    },
+    {
       "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -303,6 +375,10 @@
     {
       "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\petpictures\\3976ac87-acd9-49b7-b9bc-dfb525d71872.png",
       "PackagePath": "staticwebassets\\petpictures\\3976ac87-acd9-49b7-b9bc-dfb525d71872.png"
+    },
+    {
+      "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\petpictures\\55f5ef7c-f60a-4785-ab5e-c5cae7c67546.png",
+      "PackagePath": "staticwebassets\\petpictures\\55f5ef7c-f60a-4785-ab5e-c5cae7c67546.png"
     },
     {
       "Id": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\wwwroot\\petpictures\\a5fa263f-5571-480a-b032-b4c3f77006b2.jpg",

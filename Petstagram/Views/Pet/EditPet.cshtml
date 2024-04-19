@@ -8,24 +8,25 @@
     <link href="~/css/form.css" rel="stylesheet" />
 }
 
+<a class="btn btn-dark float-end text-light w-10" asp-action="Index" asp-controller="Pet">&#8592; Back</a>
 <h1 class="custom-title mt-4">@ViewBag.Action Album</h1>
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 <form method="post" asp-action="EditPet">
-    <div class="row mb-3">
+    <div class="d-flex flex-column gap-2">
         <input type="hidden" asp-for="Id" />
         <input type="hidden" asp-for="OwnerId" />
         <input type="hidden" asp-for="Previous" />
-        <div class="col-sm-3 offset-1"><label class="control-label display-6">Name:</label></div>
-        <div class="col-sm-4">
-            <input asp-for="Name" class="form-control form-control-lg" placeholder="Name of Pet" required />
-        </div>
-        <div class="col">
+
+        <label class="control-label display-6">Name:</label>
+        <input asp-for="Name" class="form-control form-control-lg" placeholder="Name of Pet" required />
+
+        <div>
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
     </div>
 
-    <div class="d-grid gap-2 col-4 mx-auto mt-4">
+    <div class="d-grid gap-2 mx-auto mt-4">
         <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
         <a role="button" href="@Model.Previous" class="btn btn-secondary">Cancel</a>
     </div>

@@ -1,0 +1,89 @@
+﻿@model Picture
+@{
+    ViewData["Title"] = "Display";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/display.css" />
+}
+@section Scripts {
+    <script src="~/js/display.js"></script>
+}
+
+<div id="picture-holder" class="mx-auto">
+    <!--Overlay-->
+    <div id="overlay" class="fade show">
+        <div class="container mx-auto">
+            <a role="button" class="btn btn-close btn-close-white btn-lg float-end p-4" id="close-overlay" aria-expanded="false" aria-controls="overlay"></a>
+            <div class="text-center">
+                <h1 id="name" class="text-light">@Html.Raw(Model.DisplayName)</h1>
+                <i id="date" class="text-secondary">@Model.UploadDate</i>
+                <hr class="border border-secondary border-2 opacity-50" />
+            </div>
+            <p id="story" class="text-light">@Html.Raw(Model.Story)</p>
+        </div>
+    </div>
+    <h1 id="specs" class="d-flex justify-content-between">
+        <span class="custom-title">@ViewBag.Pets</span>
+        <span>@ViewBag.Specs</span></h1>
+    <img class="img" src="~/demo/@Model.FileName" />
+    <div id="connections">
+        @for(var con = 0; con < ViewBag.Connections.Count; con++)
+        {
+            var connection = ViewBag.Connections[con];
+            string className = "arrow-sign ";
+            string content;
+
+            if (connection.Visited)
+            {
+                className = "visited ";
+            }
+            switch(con)
+            {
+                case 0:
+                    className += "left";
+                    content = "&larr;";
+                    break;
+                case 1:
+                    className += "right";
+                    content = "&rarr;";
+                    break;
+                case 2:
+                    className += "topleft";
+                    content = "&larr;";
+                    break;
+                case 3:
+                    className += "topright";
+                    content = "&rarr;";
+                    break;
+                case 4:
+                    className += "bottomleft";
+                    content = "&larr;";
+                    break;
+                case 5:
+                    className += "bottomright";
+                    content = "&rarr;";
+                    break;
+                case 6:
+                    className += "up";
+                    content = "&uarr;";
+                    break;
+                case 7:
+                    className += "down";
+                    content = "&darr;";
+                    break;
+                default:
+                    className += "circle";
+                    content = "";
+                    break;
+            }
+            
+            <div class="container @className">
+                <div>
+                    <a asp-action="Display" asp-route-id="@connection.Id">@Html.Raw(content)</a>
+                </div>
+            </div>
+
+            
+        }
+    </div>
+</div>

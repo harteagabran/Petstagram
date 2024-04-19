@@ -4,7 +4,7 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/detail.css" />
 }
-<div id="picture-sect" class="d-flex justify-content-center mt-4">
+<div id="picture-sect" class="mt-4">
  
     <img class="img-fluid bg-dark" src="~/petpictures/@ViewBag.Pic.FileName" />
     <div id="picture-details" class="bg-dark p-lg-4">
@@ -25,7 +25,7 @@
                 <span class="bg-primary p-2 rounded">@pet.Name</span>
             }
         </div>
-        <div id="btn-list" class="d-flex flex-column mt-3">
+        <div id="btn-list" class="d-flex mt-3">
             <a role="button" asp-controller="Pet" asp-action="EditPic" asp-route-id="@ViewBag.Pic.Id" asp-route-prevUrl="@Url.PageLink()" asp-route-pathUrl="@ViewBag.PrevUrl" class="btn btn-secondary">Edit</a>
             <a role="button" asp-controller="Pet" asp-action="DeletePic" asp-route-id="@ViewBag.Pic.Id" class="btn btn-danger">Delete</a>
             <a class="btn btn-dark text-light" href="@ViewBag.PrevUrl">&#8592; Back</a>

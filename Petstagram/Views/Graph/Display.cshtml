@@ -10,10 +10,25 @@
 }
 
 <div id="picture-holder" class="mx-auto">
-    <h1 id="specs">@ViewBag.Specs</h1>
-    <img class="img-fluid" src="~/petpictures/@Model.FileName" />
+    <!--Overlay-->
+    <div id="overlay" class="fade show">
+        <div class="container mx-auto">
+            <a role="button" class="btn btn-close btn-close-white btn-lg float-end p-4" id="close-overlay" aria-expanded="false" aria-controls="overlay"></a>
+            <div class="text-center">
+                <h1 id="name" class="text-light">@Html.Raw(Model.DisplayName)</h1>
+                <i id="date" class="text-secondary">@Model.UploadDate</i>
+                <hr class="border border-secondary border-2 opacity-50" />
+            </div>
+            <p id="story" class="text-light">@Html.Raw(Model.Story)</p>
+        </div>
+    </div>
+    <h1 id="specs" class="d-flex justify-content-between">
+        <span class="custom-title">@ViewBag.Pets</span>
+        <span>@ViewBag.Specs</span>
+    </h1>
+    <img class="img" src="~/petpictures/@Model.FileName" />
     <div id="connections">
-        @for(var con = 0; con < ViewBag.Connections.Count; con++)
+        @for (var con = 0; con < ViewBag.Connections.Count; con++)
         {
             var connection = ViewBag.Connections[con];
             string className = "arrow-sign ";
@@ -23,7 +38,7 @@
             {
                 className = "visited ";
             }
-            switch(con)
+            switch (con)
             {
                 case 0:
                     className += "left";
@@ -62,21 +77,14 @@
                     content = "";
                     break;
             }
-            
-            <a class="@className" asp-action="Display" asp-route-id="@connection.Id">@Html.Raw(content)</a>
-        }
-    </div>
 
-    <!--Overlay-->
-    <div id="overlay" class="fade show">
-        <div class="container mx-auto">
-            <a role="button" class="btn btn-close btn-close-white btn-lg float-end p-4" id="close-overlay" aria-expanded="false" aria-controls="overlay"></a>
-            <div class="text-center">
-                <h1 id="name" class="text-light">@Html.Raw(Model.DisplayName)</h1>
-                <i id="date" class="text-secondary">@Model.UploadDate</i>
-                <hr class="border border-secondary border-2 opacity-50" />
+            <div class="container @className">
+                <div>
+                    <a asp-action="Display" asp-route-id="@connection.Id">@Html.Raw(content)</a>
+                </div>
             </div>
-            <p id="story" class="text-light">@Html.Raw(Model.Story)</p>
-        </div>
+
+
+        }
     </div>
 </div>

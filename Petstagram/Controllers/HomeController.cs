@@ -23,7 +23,13 @@ namespace Petstagram.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (_signInManager.IsSignedIn(User))
+            {
+                return RedirectToAction("Index", "Pet");
+            } else
+            {
+                return View();
+            }
         }
 
         [HttpGet]

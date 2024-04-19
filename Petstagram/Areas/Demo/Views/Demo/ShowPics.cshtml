@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "ShowPics - Demo";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/showings.css" />
+}
+
+<a class="btn btn-dark btn-lg float-start text-light w-10" asp-action="Index">&#8592; Back</a>
+
+<h1 class="text-center custom-title mt-4">Photos</h1>
+<div class="card-container mt-3">
+    @foreach (var picture in ViewBag.Pics)
+    {
+        <a asp-action="DetailPic" asp-route-id="@picture.Id" asp-route-prevUrl="@Url.PageLink()" class="card mb-3">
+            <div class="card-img-holder">
+                <img src="~/demo/@picture.FileName?t=@picture.LastModified.Ticks" class="card-img-top custom-card-img bg-dark">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@Html.Raw(picture.DisplayName)</h5>
+                <p class="card-text">@picture.UploadDate</p>
+            </div>
+        </a>
+    }
+</div>

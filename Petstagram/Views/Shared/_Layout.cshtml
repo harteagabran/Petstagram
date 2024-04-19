@@ -44,13 +44,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="Demo" asp-controller="Demo" asp-action="Index">Demo</a>
+                        </li>
                     </ul>
                     <ul class="navbar-nav mb-sm-0">
                         @using Microsoft.AspNetCore.Identity
                         @inject SignInManager<User> signInManager
                         @if (signInManager.IsSignedIn(User))
                         {
-                            <li class="nav-item">
+                            <li class="nav-item align-self-end">
                                 <form method="post" asp-controller="Home" asp-action="Logout" asp-area="">
                                     <span class="text-light">@User.Identity.Name</span>
                                     <input type="submit" value="Log Out" class="btn btn-secondary" />
@@ -59,11 +62,11 @@
                         }
                         else
                         {
-                            <li class="nav-item">
-                                <a asp-action="Register" asp-controller="Home" asp-area="" class="nav-link">Register</a>
+                            <li class="nav-item align-self-end">
+                                <a asp-action="Register" asp-controller="Home" asp-area="" class="nav-link text-light">Register</a>
                             </li>
                             <li class="nav-item">
-                                <a asp-action="Login" asp-controller="Home" asp-area="" class="nav-link" asp-route-returnUrl="@Url.PageLink()">Login</a>
+                                <a asp-action="Login" asp-controller="Home" asp-area="" class="nav-link text-light" asp-route-returnUrl="@Url.PageLink()">Login</a>
                             </li>
                         }
                     </ul>

@@ -7,7 +7,7 @@
 }
 
 <a class="btn btn-dark btn-lg float-start text-light w-10" asp-action="Index" asp-controller="Pet">&#8592; Back</a>
-@if (ViewBag.Pics != null)
+@if (ViewBag.Pics.Count > 0)
 {
     <h1 class="text-center custom-title mt-4">Photos</h1>
     <div class="card-container mt-3">
@@ -29,6 +29,6 @@ else
 {
     <div class="text-center">
         <h1 class="display-1 text-info">No Pictures here to show.</h1>
-        <a role="button" asp-controller="Pet" asp-action="AddPic" class="btn btn-link btn-lg">Add Photo</a>
+        <a role="button" asp-controller="Pet" asp-action="AddPic" class="btn btn-link btn-lg">Add Album</a>
     </div>
 }

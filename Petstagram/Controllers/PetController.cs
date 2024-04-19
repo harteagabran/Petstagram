@@ -37,7 +37,10 @@ namespace Petstagram.Controllers
         public async Task<IActionResult> AddPet()
         {
             ViewBag.Action = "Add";
-            var model = new FormPet();
+            var model = new FormPet
+            {
+                Previous = Url.Action("Index", "Pet")
+            };
             var user = _user.GetUserId(User);
             model.OwnerId = user;
             return View("EditPet", model);
@@ -93,8 +96,9 @@ namespace Petstagram.Controllers
         [HttpGet]
         public IActionResult AddPic()
         {
+            var user = _user.GetUserId(User);
             //if no pets redirect to Pets form
-            if(!_db.HasPetData())
+            if (!_db.HasPetData(user))
             {
                 return RedirectToAction("AddPet");
             }
@@ -102,7 +106,10 @@ namespace Petstagram.Controllers
             var model = new FormPicture();
 
             ViewBag.Action = "Add";
-            ViewBag.Pets = _db.GetAllPets();
+            
+            List<Pet> pets = _db.GetAllPetsByOwner(user);
+            pets = pets.Where(o => o.OwnerId != "Demo").ToList();
+            ViewBag.Pets = pets;
             ViewBag.PathUrl = Url.Action("ShowPics", "Data");
             model.Previous = Url.Action("ShowPics", "Data");
 

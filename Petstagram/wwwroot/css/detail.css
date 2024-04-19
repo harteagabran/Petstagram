@@ -1,15 +1,18 @@
 ﻿#picture-sect {
-    height: 80vh;
-}
-#picture-details {
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(30rem, 1fr));
 
-    & > #story {
-        flex: 1 0 auto;  
-        max-height: 40vh;
-        overflow-y: scroll;
+    img {
+        display: block;
+        min-width: 100%;
+    }
+
+    #picture-details {
+        padding: 2%;
+    }
+
+    #btn-list > * {
+        width: 100%;
     }
 }

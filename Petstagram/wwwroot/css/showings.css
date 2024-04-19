@@ -11,31 +11,23 @@
     height: 100%;
     object-fit: cover;
 }
-main {
-    width: 90vw;
-}
-.container {
-    margin-left: 2vw;
-    margin-right: 2vw;
-}
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    gap: 2%;
+    display: grid;
+    gap: 1rem 2rem;
+    grid-template-columns:
+        repeat(auto-fit, minmax(12rem, 1fr));
 }
 .card {
-    width: 75%;
-    max-width: 215px;
+    max-width: 16rem;
     text-decoration: none;
 
-    & > .card-body > .card-title {
-        color: black;
-        text-align: center;
-    }
-    & > .card-body > .card-text {
-        color: gray;
-        text-align: center;
+    .card-body {
+        .card-title {
+            color: black;
+        }
+        .card-text {
+            color: gray;
+        }
     }
 }
 
@@ -46,7 +38,9 @@ main {
 .accordion-header {
     border: 1px solid white;
 }
-
+.list-group > a {
+    text-decoration: none;
+}
 .list-group-item:hover {
     background-color: darkgrey;
     border: 1px solid white;

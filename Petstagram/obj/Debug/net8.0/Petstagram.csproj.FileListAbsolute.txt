@@ -288,3 +288,4 @@ C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\ob
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\Petstagram.csproj.CopyComplete
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\Petstagram.genruntimeconfig.cache
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\ref\Petstagram.dll
+C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\scopedcss\Areas\Demo\Views\Shared\_Layout.cshtml.rz.scp.css

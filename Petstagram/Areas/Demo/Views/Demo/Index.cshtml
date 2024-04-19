@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Demo Home Page";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/main.css" />
+}
+
+<div class="text-center mt-4">
+    <h1 class="display-4 custom-title">Petstagram</h1>
+    <p class="text-muted">Demo Version</p>
+</div>
+<div id="main-sec" class="menu d-flex flex-column justify-content-around">
+        <p role="button" asp-action="AddPic" class="btn btn-secondary btn-lg" disabled>Add Photo</p>
+
+        <p role="button" asp-action="AddPet" class="btn btn-secondary btn-lg" disabled>Add Album</p>
+        <a role="button" asp-action="ShowPics" class="btn btn-dark btn-lg">View all Photos</a>
+        <a role="button"  asp-action="ShowPets" class="btn btn-dark btn-lg">View all Albums</a>
+        <a role="button" asp-action="GraphSelect" class="btn btn-primary btn-lg">Start Special View</a>
+</div>

@@ -16,7 +16,8 @@ namespace Petstagram.Repositories
         void UpdatePet(Pet pet);
         void DeletePic(Picture pic);
         void DeletePet(Pet pet);
-        bool HasPetData();
+        bool HasPetData(string owner);
         List<Picture> GetAllPicsByOwner(string owner);
+        List<Pet> GetAllPetsFromPic(Picture pic);
     }
 }
