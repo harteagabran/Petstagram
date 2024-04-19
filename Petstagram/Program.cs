@@ -12,8 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 //DB Context
-var connectionString = builder.Configuration.GetConnectionString("MySqlConn");
-builder.Services.AddDbContext<PetContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+var connectionString = builder.Configuration.GetConnectionString("AzureDb");
+builder.Services.AddDbContext<PetContext>(options => options.UseSqlServer(connectionString, options => options.EnableRetryOnFailure()));
+
 
 //Repository
 builder.Services.AddScoped<IRepository, Repository>();

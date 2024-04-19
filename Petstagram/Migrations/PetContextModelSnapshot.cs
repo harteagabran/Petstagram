@@ -17,33 +17,34 @@ namespace Petstagram.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.3")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("ProductVersion", "8.0.4")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasMaxLength(256)
-                        .HasColumnType("varchar(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("NormalizedName")
                         .HasMaxLength(256)
-                        .HasColumnType("varchar(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
-                        .HasDatabaseName("RoleNameIndex");
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
                 });
@@ -54,17 +55,17 @@ namespace Petstagram.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RoleId")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -79,17 +80,17 @@ namespace Petstagram.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -101,17 +102,17 @@ namespace Petstagram.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -123,10 +124,10 @@ namespace Petstagram.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("RoleId")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("UserId", "RoleId");
 
@@ -138,16 +139,16 @@ namespace Petstagram.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
@@ -267,15 +268,15 @@ namespace Petstagram.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OwnerId")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -308,25 +309,25 @@ namespace Petstagram.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FileName")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("LastModified")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Story")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UploadDate")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -419,135 +420,135 @@ namespace Petstagram.Migrations
                             Id = 10,
                             DisplayName = "Base Form Diddy",
                             FileName = "diddy (1).png",
-                            LastModified = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3839),
+                            LastModified = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2470),
                             Story = "Meet Diddy, the cute brown Chihuahua mix with a heart of gold. Despite his small size, Diddy is bursting with personality and charm. With his expressive eyes and perky ears, he's always ready to steal your heart with just a wag of his tail. Diddy loves cuddling in your lap and chasing his favorite toys with boundless energy. Fearless and affectionate, he brightens every day with his playful antics and unwavering loyalty. Life is simply better with Diddy around.",
-                            UploadDate = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3792)
+                            UploadDate = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2424)
                         },
                         new
                         {
                             Id = 11,
                             DisplayName = "Stare of Diddy",
                             FileName = "diddy (2).png",
-                            LastModified = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3843),
+                            LastModified = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2473),
                             Story = "Diddy, the adorable brown Chihuahua mix, may be small, but his stare is as serious as they come. With furrowed brows and intense eyes, he fixes his gaze on whatever captures his attention, be it a passing squirrel or a distant sound. In those moments, there's no mistaking his focus and determination. It's as if he's pondering life's deepest mysteries or standing guard over his beloved humans. Despite his playful nature, Diddy's serious stare reminds you that even the smallest of dogs can possess a big dose of gravitas.",
-                            UploadDate = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3841)
+                            UploadDate = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2472)
                         },
                         new
                         {
                             Id = 12,
                             DisplayName = "Stare of Diddy",
                             FileName = "diddy (3).png",
-                            LastModified = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3846),
+                            LastModified = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2476),
                             Story = "Imagine Diddy, the suave brown Chihuahua mix, sporting a pair of trendy glasses and a snazzy tie, exuding an air of effortless coolness. With his glasses perched just right and his tie impeccably knotted, he struts down the street, turning heads with his confident swagger. Diddy's cool demeanor is infectious, and he knows it, flashing a charming grin as he captures the attention of everyone he passes. Whether he's lounging in a cafe or basking in the sun at the park, Diddy's undeniable style and laid-back attitude make him the epitome of cool canine charm.",
-                            UploadDate = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3844)
+                            UploadDate = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2475)
                         },
                         new
                         {
                             Id = 13,
                             DisplayName = "Doge of War",
                             FileName = "diddy (4).png",
-                            LastModified = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3848),
+                            LastModified = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2479),
                             Story = "Diddy, the once cheerful brown Chihuahua mix, now bears the anger of Kratos, the god of war. His playful demeanor replaced by a fierce snarl, and his innocent gaze now burns with the intensity of ancient wrath. With each step, his paws echo the thunderous march of a warrior, and his every growl reverberates with the might of a deity. No longer content with simple games, Diddy prowls with the ferocity of a god in battle, his tiny frame a vessel for divine rage. Those who once knew him tremble in fear at the sight of his transformed form, for Diddy, now imbued with the wrath of Kratos, commands the respect and awe of mortals and gods alike.",
-                            UploadDate = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3847)
+                            UploadDate = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2477)
                         },
                         new
                         {
                             Id = 14,
                             DisplayName = "Legendary Super Doge",
                             FileName = "diddy (5).png",
-                            LastModified = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3851),
+                            LastModified = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2481),
                             Story = "Pushed to his limits, Diddy stood amidst the chaos of battle, his determination unwavering despite the odds stacked against him. As the clash intensified, a surge of energy enveloped him, filling him with an unprecedented power. With a mighty roar, he unleashed his latent strength, his fur glowing with a radiant aura. In that moment of sheer willpower, Diddy transcended his canine form, ascending to the ranks of the legendary super saiyan. With newfound power coursing through his veins, he soared into the fray, his bark echoing with the force of a thousand warriors as he faced his adversaries head-on, ready to defend his world at any cost.",
-                            UploadDate = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3850)
+                            UploadDate = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2480)
                         },
                         new
                         {
                             Id = 15,
                             DisplayName = "Mythical Beast Diddy",
                             FileName = "diddy (6).png",
-                            LastModified = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3854),
+                            LastModified = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2484),
                             Story = "In the realm of mystic wonders, Diddy stands tall as the mighty dog of magic. With a flick of his tail and a glint in his eye, he commands the very forces of enchantment. His fur glistens with the shimmer of ancient spells, and his bark echoes with the power of incantations long forgotten. As he roams through realms of mystical beauty, Diddy's presence sparks awe and wonder among all who behold him. With each step, he reaffirms his role as the guardian of magic, ensuring that its secrets remain safe and its wonders never fade.",
-                            UploadDate = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3853)
+                            UploadDate = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2483)
                         },
                         new
                         {
                             Id = 16,
                             DisplayName = "Determination",
                             FileName = "diddy (7).png",
-                            LastModified = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3857),
+                            LastModified = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2487),
                             Story = "With unwavering resolve, Diddy stands tall, his eyes burning with determination. Despite the challenges that lay ahead, he remains steadfast in his pursuit of his goals. With each step forward, he channels his inner strength, ready to overcome any obstacle in his path. No setback can deter him, for his spirit is unbreakable and his will indomitable. With a heart full of courage and a mind set on success, Diddy presses on, confident in his ability to achieve greatness.",
-                            UploadDate = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3856)
+                            UploadDate = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2486)
                         },
                         new
                         {
                             Id = 17,
                             DisplayName = "Xmas Miracle",
                             FileName = "diddy (8).jpg",
-                            LastModified = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3860),
+                            LastModified = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2490),
                             Story = "In the heart of the North Pole, amidst the swirling snowflakes and twinkling lights, Santa Diddy reigns as the beloved canine companion of the holiday season. With his red coat trimmed in white fur and a jolly twinkle in his eye, he spreads cheer and goodwill to all he meets. From his sleigh pulled by a team of spirited reindeer to his jolly laugh that echoes through the frosty air, Santa Diddy embodies the magic of Christmas. With a wag of his tail and a hearty &quot;Ho, ho, ho&quot; he delivers joy to homes around the world, ensuring that the spirit of the season shines bright for all.",
-                            UploadDate = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3859)
+                            UploadDate = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2489)
                         },
                         new
                         {
                             Id = 18,
                             DisplayName = "Rest Friend",
                             FileName = "diddy (9).jpg",
-                            LastModified = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3863),
+                            LastModified = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2492),
                             Story = "As the day draws to a close, Diddy finds solace in the soft embrace of his favorite spot—the bed. With a contented sigh, he curls up amidst the cozy blankets, his eyes heavy with the weight of the day's adventures. As he nestles into the warmth, a sense of tranquility washes over him, melting away the cares of the world. With each gentle breath, he sinks deeper into relaxation, the rhythmic rise and fall of his chest a soothing lullaby. In this moment of peaceful serenity, Diddy finds respite from the chaos of the day, basking in the simple joy of rest and relaxation.",
-                            UploadDate = new DateTime(2024, 4, 13, 15, 36, 56, 449, DateTimeKind.Local).AddTicks(3862)
+                            UploadDate = new DateTime(2024, 4, 18, 22, 31, 3, 327, DateTimeKind.Local).AddTicks(2491)
                         });
                 });
 
             modelBuilder.Entity("Petstagram.Models.User", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
-                        .HasColumnType("varchar(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("tinyint(1)");
+                        .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("tinyint(1)");
+                        .HasColumnType("bit");
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
-                        .HasColumnType("varchar(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256)
-                        .HasColumnType("varchar(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("PasswordHash")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("tinyint(1)");
+                        .HasColumnType("bit");
 
                     b.Property<string>("SecurityStamp")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("tinyint(1)");
+                        .HasColumnType("bit");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
-                        .HasColumnType("varchar(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
@@ -556,7 +557,8 @@ namespace Petstagram.Migrations
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
-                        .HasDatabaseName("UserNameIndex");
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });

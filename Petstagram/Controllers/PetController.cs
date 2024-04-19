@@ -28,7 +28,8 @@ namespace Petstagram.Controllers
         }
         public IActionResult Index()
         {
-            bool noob = _db.HasPetData();
+            var user = _user.GetUserId(User);
+            bool noob = _db.HasPetData(user);
             ViewBag.empty = noob;
             return View();
         }

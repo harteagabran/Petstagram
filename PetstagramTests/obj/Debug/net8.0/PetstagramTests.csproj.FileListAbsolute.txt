@@ -7,7 +7,6 @@ C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTes
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\Petstagram.staticwebassets.runtime.json
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\Petstagram.exe
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\testhost.exe
-C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\PetstagramTests.deps.json
@@ -48,7 +47,6 @@ C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTes
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\Newtonsoft.Json.dll
-C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\NuGet.Frameworks.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\System.Drawing.Common.dll
@@ -153,3 +151,4 @@ C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTes
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\PetstagramTests.pdb
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\PetstagramTests.genruntimeconfig.cache
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\ref\PetstagramTests.dll
+C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll
