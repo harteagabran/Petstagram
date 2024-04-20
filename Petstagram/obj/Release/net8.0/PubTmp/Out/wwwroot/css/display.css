@@ -1,0 +1,136 @@
+﻿#picture-holder {
+    position: relative;
+    background: url("../assets/glow.gif"), radial-gradient(circle, #606060 25%, #505050 25%, #505050 50%, #606060 50%, #606060 75%, #505050 75%, #505050 100%);
+    background-size: cover;
+    background-position: center;
+    
+
+    #overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 2rem;
+
+        #story {
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+
+        .text-center {
+            #name {
+                font-size: 1.75rem;
+            }
+        }
+    }
+    #specs {
+        padding: 0 1rem;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        min-width: 50%;
+        max-width: 90vw;
+        max-height: 78vh;
+        z-index: 1;
+    }
+
+    #connections {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+
+        .container
+        {
+            position: absolute;
+            max-width: 8em;
+            clip-path: inset(20% 0 10% 0);
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 8em;
+            }
+        }
+
+        .arrow-sign {
+            background-color: black;
+        }
+
+        .visited {
+            background-color: darkslategray;
+        }
+
+        .left, .right {
+            top: 30%;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .topleft {
+            top: 1%;
+            left: 5%;
+            
+            div {
+                transform: rotate(35deg);
+            }
+        }
+
+        .topright {
+            top: 1%;
+            right: 5%;
+
+            div {
+                transform: rotate(-35deg);
+            }
+            
+        }
+
+        .bottomleft {
+            bottom: 15%;
+            left: 5%;
+            
+            div {
+                transform: rotate(-35deg);
+            }
+        }
+
+        .bottomright {
+            bottom: 15%;
+            right: 5%;
+
+            div {
+                transform: rotate(15deg);
+            }
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #connections {
+        position: static !important;
+        display: grid;
+        gap: 0.25rem, 0.25rem;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+        background-color: black;
+        border: 3px solid white;
+
+    }
+
+    .arrow-sign, .visited {
+        position: static !important;
+        border: 0px solid transparent !important;
+        justify-self: center;
+    }
+}
