@@ -28,7 +28,8 @@ namespace Petstagram.Controllers
         }
         public IActionResult Index()
         {
-            bool noob = _db.HasPetData();
+            var user = _user.GetUserId(User);
+            bool noob = _db.HasPetData(user);
             ViewBag.empty = noob;
             return View();
         }
@@ -108,7 +109,6 @@ namespace Petstagram.Controllers
             ViewBag.Action = "Add";
             
             List<Pet> pets = _db.GetAllPetsByOwner(user);
-            pets = pets.Where(o => o.OwnerId != "Demo").ToList();
             ViewBag.Pets = pets;
             ViewBag.PathUrl = Url.Action("ShowPics", "Data");
             model.Previous = Url.Action("ShowPics", "Data");
@@ -119,8 +119,9 @@ namespace Petstagram.Controllers
         [HttpGet]
         public IActionResult EditPic(int id, string prevUrl = "", string pathurl = "")
         {
+            var user = _user.GetUserId(User);
             ViewBag.Action = "Edit";
-            ViewBag.Pets = _db.GetAllPets();
+            ViewBag.Pets = _db.GetAllPetsByOwner(user);
             ViewBag.PathUrl = pathurl;
             var pic = _db.GetPicById(id);
             var model = new FormPicture
@@ -220,8 +221,10 @@ namespace Petstagram.Controllers
                 }
                 return Redirect($"{fpic.Previous}?prevurl={pathurl}");
             }
-
-            ViewBag.Pets = _db.GetAllPets().ToList();
+            var user = _user.GetUserId(User);
+            List<Pet> pets = _db.GetAllPetsByOwner(user);
+            pets = pets.Where(o => o.OwnerId != "Demo").ToList();
+            ViewBag.Pets = pets;
             ViewBag.Action = (fpic.Id == 0) ? "Add" : "Edit";
             if(fpic.Picture == null && fpic.Replace)
             {
