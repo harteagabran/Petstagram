@@ -13,9 +13,9 @@
 }
 .card-container {
     display: grid;
-    gap: 1rem 2rem;
+    gap: 1rem;
     grid-template-columns:
-        repeat(auto-fit, minmax(12rem, 1fr));
+        repeat(auto-fit, 16rem);
 }
 .card {
     max-width: 16rem;
@@ -45,4 +45,10 @@
     background-color: darkgrey;
     border: 1px solid white;
     cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    .card-container {
+        justify-content: center;
+    }
 }
