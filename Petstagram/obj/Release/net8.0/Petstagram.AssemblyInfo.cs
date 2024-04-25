@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Petstagram")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e009229b40de247a28d2a4e752ead06cf953bdcd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2aff5f9ce1c0de96780edbd8e4966c630cdc294d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Petstagram")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Petstagram")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

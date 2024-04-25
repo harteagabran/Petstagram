@@ -58,7 +58,7 @@ namespace Petstagram.Controllers
                 OwnerId = pet.OwnerId,
                 Previous = !string.IsNullOrEmpty(prevUrl) ? prevUrl : Url.Action("Index", "Pet")
             };
-            ViewBag.Action = "Edit";
+            ViewBag.Action = "Save";
             return View("EditPet", model);
         }
         [HttpPost]
@@ -120,7 +120,7 @@ namespace Petstagram.Controllers
         public IActionResult EditPic(int id, string prevUrl = "", string pathurl = "")
         {
             var user = _user.GetUserId(User);
-            ViewBag.Action = "Edit";
+            ViewBag.Action = "Save";
             ViewBag.Pets = _db.GetAllPetsByOwner(user);
             ViewBag.PathUrl = pathurl;
             var pic = _db.GetPicById(id);
@@ -225,7 +225,7 @@ namespace Petstagram.Controllers
             List<Pet> pets = _db.GetAllPetsByOwner(user);
             pets = pets.Where(o => o.OwnerId != "Demo").ToList();
             ViewBag.Pets = pets;
-            ViewBag.Action = (fpic.Id == 0) ? "Add" : "Edit";
+            ViewBag.Action = (fpic.Id == 0) ? "Add" : "Save";
             if(fpic.Picture == null && fpic.Replace)
             {
                 ModelState.AddModelError("Picture", "Picture cannot be empty");
