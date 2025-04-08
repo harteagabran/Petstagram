@@ -145,10 +145,11 @@ C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTes
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\PetstagramTests.AssemblyInfo.cs
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\PetstagramTests.csproj.CoreCompileInputs.cache
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\PetstagramTests.sourcelink.json
-C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\PetstagramTests.csproj.CopyComplete
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\PetstagramTests.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\refint\PetstagramTests.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\PetstagramTests.pdb
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\PetstagramTests.genruntimeconfig.cache
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\ref\PetstagramTests.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\bin\Debug\net8.0\Petstagram.staticwebassets.endpoints.json
+C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\PetstagramTests\obj\Debug\net8.0\Petstagr.13FF154F.Up2Date

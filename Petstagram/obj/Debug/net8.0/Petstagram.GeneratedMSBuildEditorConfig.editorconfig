@@ -17,6 +17,8 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
 [C:/Users/kumar/OneDrive/Documents/DMACC/Data Structures/Petstagram/Petstagram/Areas/Demo/Views/Demo/DetailPic.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGVtb1xWaWV3c1xEZW1vXERldGFpbFBpYy5jc2h0bWw=

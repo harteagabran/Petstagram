@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Migrations\\20250408215903_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Petstagram\\Migrations\\20250408215903_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A81AFBB-6B12-41B0-824E-34BFB405EB23}|Petstagram\\Petstagram.csproj|c:\\users\\kumar\\onedrive\\documents\\dmacc\\data structures\\petstagram\\petstagram\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A81AFBB-6B12-41B0-824E-34BFB405EB23}|Petstagram\\Petstagram.csproj|solutionrelative:petstagram\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Migrations\\20250408215554_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Petstagram\\Migrations\\20250408215554_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A81AFBB-6B12-41B0-824E-34BFB405EB23}|Petstagram\\Petstagram.csproj|c:\\users\\kumar\\onedrive\\documents\\dmacc\\data structures\\petstagram\\petstagram\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3A81AFBB-6B12-41B0-824E-34BFB405EB23}|Petstagram\\Petstagram.csproj|solutionrelative:petstagram\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A81AFBB-6B12-41B0-824E-34BFB405EB23}|Petstagram\\Petstagram.csproj|c:\\users\\kumar\\onedrive\\documents\\dmacc\\data structures\\petstagram\\petstagram\\controllers\\petcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A81AFBB-6B12-41B0-824E-34BFB405EB23}|Petstagram\\Petstagram.csproj|solutionrelative:petstagram\\controllers\\petcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A81AFBB-6B12-41B0-824E-34BFB405EB23}|Petstagram\\Petstagram.csproj|c:\\users\\kumar\\onedrive\\documents\\dmacc\\data structures\\petstagram\\petstagram\\views\\pet\\editpet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A81AFBB-6B12-41B0-824E-34BFB405EB23}|Petstagram\\Petstagram.csproj|solutionrelative:petstagram\\views\\pet\\editpet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 19,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250408215903_Init.cs",
+              "DocumentMoniker": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Migrations\\20250408215903_Init.cs",
+              "RelativeDocumentMoniker": "Petstagram\\Migrations\\20250408215903_Init.cs",
+              "ToolTip": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Migrations\\20250408215903_Init.cs",
+              "RelativeToolTip": "Petstagram\\Migrations\\20250408215903_Init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T21:59:03.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20250408215554_Init.cs",
+              "DocumentMoniker": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Migrations\\20250408215554_Init.cs",
+              "RelativeDocumentMoniker": "Petstagram\\Migrations\\20250408215554_Init.cs",
+              "ToolTip": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Migrations\\20250408215554_Init.cs",
+              "RelativeToolTip": "Petstagram\\Migrations\\20250408215554_Init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T21:55:54.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Program.cs",
+              "RelativeDocumentMoniker": "Petstagram\\Program.cs",
+              "ToolTip": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Program.cs",
+              "RelativeToolTip": "Petstagram\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA2wA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T04:16:30.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\appsettings.json",
+              "RelativeDocumentMoniker": "Petstagram\\appsettings.json",
+              "ToolTip": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\appsettings.json",
+              "RelativeToolTip": "Petstagram\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-26T04:16:21.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PetController.cs",
+              "DocumentMoniker": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Controllers\\PetController.cs",
+              "RelativeDocumentMoniker": "Petstagram\\Controllers\\PetController.cs",
+              "ToolTip": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Controllers\\PetController.cs",
+              "RelativeToolTip": "Petstagram\\Controllers\\PetController.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAmwOMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T03:02:24.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditPet.cshtml",
+              "DocumentMoniker": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Views\\Pet\\EditPet.cshtml",
+              "RelativeDocumentMoniker": "Petstagram\\Views\\Pet\\EditPet.cshtml",
+              "ToolTip": "C:\\Users\\kumar\\OneDrive\\Documents\\DMACC\\Data Structures\\Petstagram\\Petstagram\\Views\\Pet\\EditPet.cshtml",
+              "RelativeToolTip": "Petstagram\\Views\\Pet\\EditPet.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAMBVwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-25T03:02:12.87Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

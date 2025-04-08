@@ -285,7 +285,11 @@ C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\ob
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\scopedcss\bundle\Petstagram.styles.css
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\scopedcss\projectbundle\Petstagram.bundle.scp.css
-C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\Petstagram.csproj.CopyComplete
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\Petstagram.genruntimeconfig.cache
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\ref\Petstagram.dll
 C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\scopedcss\Areas\Demo\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\Petstagram.csproj.Up2Date
+C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\bin\Debug\net8.0\Petstagram.staticwebassets.endpoints.json
+C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\staticwebassets\msbuild.Petstagram.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\kumar\OneDrive\Documents\DMACC\Data Structures\Petstagram\Petstagram\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
